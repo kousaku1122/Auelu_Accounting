@@ -1,5 +1,5 @@
 class TopController < ApplicationController
     def index
-        @users = User.all
+        @players = Player.all
     end
 end
