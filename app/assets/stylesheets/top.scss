@@ -1,3 +1,19 @@
-// Place all the styles related to the top controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+@import "bootstrap";
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.user-lists {
+    border: solid 1px #000000;
+    border-radius: 20px;
+    width: 95%;
+    margin: 20px auto;
+    li {
+        padding-left: 20px;
+    }
+}

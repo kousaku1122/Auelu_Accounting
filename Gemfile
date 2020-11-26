@@ -17,6 +17,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'devise'
 gem 'cancancan'
 gem 'rails_admin', '~> 2.0.0.beta'
+gem 'bootstrap', '~> 4.3.1'
 
 group :development, :test do
   gem 'sqlite3'
