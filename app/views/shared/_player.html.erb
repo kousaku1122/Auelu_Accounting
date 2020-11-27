@@ -12,17 +12,15 @@
 <script>
     const spanText = document.getElementsByClassName("payment");
     let month = new Date().getMonth()+1;
-    let date 
     
     let user
     for (let i = 0; i < spanText.length; i++) {
-        date = new Date(spanText[i].textContent).getMonth()+1
-      if( date < month){
+      if( spanText[i].textContent < month){
           user = spanText[i].parentNode.parentNode
           user.classList.add('red');
           console.log(spanText[i]);
           console.log(spanText[i].textContent)
-          console.log(new Date(spanText[i].textContent).getMonth()+1);
+          console.log(new Date(spanText[i].textContent));
           console.log(date);
           console.log(month);
       }
