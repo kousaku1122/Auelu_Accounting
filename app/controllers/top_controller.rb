@@ -1,6 +1,6 @@
 class TopController < ApplicationController
     def index
-        @players = Player.all
+        @players = Player.all.order(uni_num: "ASC")
     end
     
     def edit
