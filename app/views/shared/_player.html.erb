@@ -6,6 +6,7 @@
         <li class="user-list"><%= player.payment %>月</li>
         <li class="user-list"><%= player.payment_date %></li>
         <li class="user-list"><% if current_user.try(:admin?) %><%= button_to "New"%><% end %></li>
+        <li><%= button_to 'Done', done_path(player), method: :post %></li>
     </ul>
 </div>
 <% end %>

@@ -1,0 +1,20 @@
+<% provide(:title, "Edit user") %>
+<h1>Update your profile</h1>
+
+  <%= form_with(model: @player, url: edit_top_path(@player), local: true) do |form| %>
+  <div class="card-deck">
+    <div class="col-md-6">
+      <section class="card">
+        <h2 class="card-header form-title">アカウント情報変更</h2>
+        <div class="card-body">
+
+        </div>
+      </section>
+    </div>
+
+    <div class="col-md-6">
+      <section class="card">
+      </section>
+    </div>
+  </div>
+  <% end %>
