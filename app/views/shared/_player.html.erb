@@ -3,9 +3,23 @@
     <ul class="user-lists">
         <li class="user-list"><%= player.uni_num %><% if current_user.try(:admin?) %><%= link_to image_tag("done.png"), done_path(player), method: :post, class: "done" %><% end %></li>
         <li class="user-list"><%= player.name %></li>
-        <li class="user-list"><%= player.payment %>月</li>
+        <li class="user-list"><span class="payment"><%= player.payment %></span>月</li>
         <li class="user-list"><%= player.payment_date %></li>
         <li class="user-list"></li>
     </ul>
 </div>
 <% end %>
+<script>
+    const spanText = document.getElementsByClassName("payment");
+    let month = new Date().getMonth()+1;
+    let date = new Date();
+    
+    let user
+    for (let i = 0; i < spanText.length; i++) {
+        date.setMonth(spanText[i]);
+      if(new Date(spanText[i].textContent).getMonth()+1 < month){
+          user = spanText[i].parentNode.parentNode
+          user.classList.add('red');
+      }
+    }
+</script>
