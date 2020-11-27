@@ -1,12 +1,11 @@
 <% @players.each do |player| %>
 <div class="col-6 col-md-4 col-lg-3">
     <ul class="user-lists">
-        <li class="user-list"><%= player.uni_num %></li>
+        <li class="user-list"><%= player.uni_num %><% if current_user.try(:admin?) %><%= link_to image_tag("done.png"), done_path(player), method: :post, class: "done" %><% end %></li>
         <li class="user-list"><%= player.name %></li>
         <li class="user-list"><%= player.payment %>月</li>
         <li class="user-list"><%= player.payment_date %></li>
-        <li class="user-list"><% if current_user.try(:admin?) %><%= button_to "New"%><% end %></li>
-        <li><%= button_to 'Done', done_path(player), method: :post %></li>
+        <li class="user-list"></li>
     </ul>
 </div>
 <% end %>

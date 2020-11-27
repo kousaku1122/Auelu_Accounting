@@ -1,4 +1,10 @@
 @import "bootstrap";
+body {
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 120px;
+    box-sizing: border-box;
+}
 
 ul {
     padding: 0;
@@ -16,4 +22,16 @@ li {
     li {
         padding-left: 20px;
     }
+}
+
+.done {
+    float: right;
+    padding-top: 10px;
+    padding-right: 20px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0; 
+    padding-left: 20px;
 }
