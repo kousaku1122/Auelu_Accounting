@@ -10,7 +10,9 @@
 </div>
 <% end %>
 <script>
-    const spanText = document.getElementsByClassName("payment");
+DateCompare();
+function DateCompare() {
+    let spanText = document.getElementsByClassName("payment");
     let month = new Date().getMonth()+1;
     
     let user
@@ -20,4 +22,5 @@
           user.classList.add('red');
       }
     }
+}
 </script>
