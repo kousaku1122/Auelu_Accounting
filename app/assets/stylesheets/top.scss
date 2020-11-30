@@ -2,8 +2,8 @@
 body {
     min-height: 100vh;
     position: relative;
-    padding-bottom: 120px;
     box-sizing: border-box;
+    padding-bottom: 50px;
 }
 
 ul {
@@ -45,6 +45,7 @@ header {
 
 .player-container {
     background-color: #fafafa;
+    padding-bottom: 20px;
 }
 
 .user-lists {
