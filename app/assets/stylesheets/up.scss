@@ -1,0 +1,43 @@
+.js-scroll-fadein {
+  transition: opacity 1s;
+  visibility: hidden;
+  opacity: 0;
+  &.is-fadein {
+    visibility: visible;
+    opacity: 0.9;
+  }
+}
+
+.arrow{
+  position: fixed;
+  right: 12px;
+  bottom: 12px;
+  color: #fff;
+  cursor: pointer;
+  background-color: #F33;
+  border-radius: 55px;
+  padding: 40px;
+  transition: all 0.2s ease-in-out;
+  z-index: 300;
+  &:hover{
+    opacity: .8;
+    bottom: 15px;
+    box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.5);
+  }
+  &:before,&:after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-top: solid 3px #fff;
+    border-right: solid 3px #fff;
+    transform: rotate(-45deg);
+    position:  absolute;
+    left: 31px;
+  }
+  &:before {
+    top: 29px;
+  }
+  &:after {
+    top: 42px;
+  }
+}

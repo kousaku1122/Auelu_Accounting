@@ -18,6 +18,14 @@ header {
     font-family: 'Work Sans', sans-serif;
 }
 
+#header {
+    height:100px;
+    transition: all 0.3s;
+}
+#header.is_scroll{
+  height:50px;
+}
+
 .navbar-brand{
     font-size: 1.2rem;
     padding: 15px;
