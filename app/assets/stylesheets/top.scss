@@ -38,11 +38,16 @@ li {
     padding-bottom: 20px;
 }
 
+.player-container {
+    background-color: #fafafa;
+}
+
 .user-lists {
-    border: solid 1px #000000;
-    border-radius: 20px;
+    border-radius: 10px;
     width: 95%;
     margin: 20px auto;
+    background-color: #fff;
+    padding: 15px;
     li {
         padding-left: 20px;
     }
