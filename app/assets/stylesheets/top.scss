@@ -19,11 +19,12 @@ header {
 }
 
 #header {
-    height:100px;
     transition: all 0.3s;
+    text-align: center;
 }
-#header.is_scroll{
-  height: 70px;
+
+.navbar-collapse {
+    background-color: #f8f9fa;
 }
 
 .navbar-brand{
