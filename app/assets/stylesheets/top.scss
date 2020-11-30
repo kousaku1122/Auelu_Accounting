@@ -13,8 +13,29 @@ ul {
 li {
     list-style: none;
 }
+
 .navbar-brand{
     font-size: 1.2rem;
+}
+
+.top-background {
+    background-image: url('background-img.jpg');
+    background-size: cover;
+    width: 100%;
+    padding-top: 160px;
+    background-position: center center;
+    background-color: rgba(255,255,255,0.6);
+    background-blend-mode: lighten;
+    text-align: center;
+    color: #000;
+}
+.top-background h1{
+    font-size: 27px;    
+    padding-bottom: 20px;
+}
+.top-background p {
+    font-size: 16px;
+    padding-bottom: 20px;
 }
 
 .user-lists {
