@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_28_075430) do
+ActiveRecord::Schema.define(version: 2020_11_30_134332) do
 
   create_table "players", force: :cascade do |t|
     t.integer "uni_num"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2020_10_28_075430) do
     t.date "payment_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "delay"
   end
 
   create_table "users", force: :cascade do |t|

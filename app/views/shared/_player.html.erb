@@ -5,7 +5,7 @@
         <li class="user-list"><%= player.name %></li>
         <li class="user-list"><span class="payment"><%= player.payment %></span>月</li>
         <li class="user-list"><%= player.payment_date %>&nbsp;</li>
-        <li class="user-list"></li>
+        <li class="user-list"><%= player.delay %>&nbsp;</li>
     </ul>
 </div>
 <% end %>
@@ -15,7 +15,7 @@
     
     let user
     for (let i = 0; i < spanText.length; i++) {
-      if( spanText[i].textContent < month　&& spanText[i].textContent != 0 ){
+      if( (spanText[i].textContent < month　&& spanText[i].textContent != 0 )||( month == 1 && spanText[i].textContent > month)){
           user = spanText[i].parentNode.parentNode
           user.classList.add('red');
       }
