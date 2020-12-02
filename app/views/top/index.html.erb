@@ -3,12 +3,43 @@
     <p>月末までに支払い、遅れる場合は連絡お願いします。連絡なしの遅延は1000円追加でいただきます。</p>
     <p>支払い月に支払いが完了していない場合、<span class="red">赤く</span>表示されています。</p>
 </div>
+<div class="container search_form">
+    <%= form_with url: root_path, method: :get, local: true do |f| %>
+        <%= f.text_field :uni_num, :placeholder => "背番号"%>
+        <%= f.submit :search %>
+    <% end %>
+</div>
+
 <div class="container-fuild player-container">
     <div class="container">
         <div class="row">
-          <%= render 'shared/player' %>
+            <% @players.each do |player| %>
+                <div class="col-12 col-md-4 col-lg-3">
+                    <ul class="user-lists">
+                        <li class="user-list"><%= player.uni_num %><% if current_user.try(:admin?) %><%= link_to image_tag("done.png"), done_path(player), method: :post, class: "done" %><% end %></li>
+                        <li class="user-list"><%= player.name %></li>
+                        <li class="user-list"><span class="payment"><%= player.payment %></span>月</li>
+                        <li class="user-list"><%= player.payment_date %>&nbsp;</li>
+                        <li class="user-list"><%= player.delay %>&nbsp;</li>
+                    </ul>
+                </div>
+            <% end %>
         </div>
     </div>
 </div>
-
+<script>
+DateCompare();
+function DateCompare() {
+    let spanText = document.getElementsByClassName("payment");
+    let month = new Date().getMonth()+1;
+    
+    let user
+    for (let i = 0; i < spanText.length; i++) {
+      if( (spanText[i].textContent < month　&& spanText[i].textContent != 0 )||( month == 1 && spanText[i].textContent > month)){
+          user = spanText[i].parentNode.parentNode
+          user.classList.add('red');
+      }
+    }
+}
+</script>
 

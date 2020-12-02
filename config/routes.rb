@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   devise_for :users
   root 'top#index'
   post '/player/:id/done' => 'player#done',   as: 'done'
+  
 end
