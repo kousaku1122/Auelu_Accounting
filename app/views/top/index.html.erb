@@ -8,7 +8,11 @@
         <%= f.number_field :num, :placeholder => "背番号"%>
         <%= f.submit "検索" %>
     <% end %>
-    <%= button_to "一覧", {controller: 'top', action: 'index'}, {method: :get, class: "lists"} %>
+    <%= button_to "一覧", {controller: 'top', action: 'index', namespace: 'form'}, {method: :get, class: "btn btn-primary lists"} %>
+    <div class="payment_button">
+        <%= button_to "支払い済み", {controller: 'top', action: 'index', namespace: 'form'}, { method: :get, class: "btn btn-success", params: {payment: 'done'} } %>
+        <%= button_to "未払い", {controller: 'top', action: 'index', namespace: 'form'}, { method: :get, class: "btn btn-danger", params: {payment: 'delay'} } %>
+    </div>
 </div>
 
 <div class="container-fuild player-container">

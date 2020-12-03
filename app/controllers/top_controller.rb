@@ -2,9 +2,10 @@ class TopController < ApplicationController
     def index
         if params[:num].present?
             @players = Player.where("uni_num = ?", params[:num])
-        else
+        else 
             @players = Player.all.order(uni_num: "ASC")
         end
+        
     end
     
     def edit

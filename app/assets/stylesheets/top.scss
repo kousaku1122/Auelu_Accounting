@@ -66,6 +66,14 @@ header {
     padding-bottom: 15px;
 }
 
+.payment_button{
+    display: inline-flex;
+    input {
+        margin-right: 10px;
+        font-size: 12px;
+    }
+}
+
 .user-lists {
     border-radius: 10px;
     width: 92%;
