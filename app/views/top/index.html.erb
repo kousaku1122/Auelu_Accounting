@@ -6,8 +6,9 @@
 <div class="container search_form">
     <%= form_with url: root_path, method: :get, local: true do |f| %>
         <%= f.number_field :num, :placeholder => "背番号"%>
-        <%= f.submit :search %>
+        <%= f.submit "検索" %>
     <% end %>
+    <%= button_to "一覧", {controller: 'top', action: 'index'}, {method: :get, class: "lists"} %>
 </div>
 
 <div class="container-fuild player-container">
