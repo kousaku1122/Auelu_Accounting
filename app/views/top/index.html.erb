@@ -5,7 +5,7 @@
 </div>
 <div class="container search_form">
     <%= form_with url: root_path, method: :get, local: true do |f| %>
-        <%= f.number_field :uni_num, :placeholder => "背番号"%>
+        <%= f.number_field :num, :placeholder => "背番号"%>
         <%= f.submit :search %>
     <% end %>
 </div>
