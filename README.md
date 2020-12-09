@@ -15,10 +15,16 @@ https://aueluaccounting.herokuapp.com/
 # 使用技術
 * Ruby 
 * Ruby on Rails 
+* DB: PostgreSQL
 * RSpec
 
 # 機能一覧
 * ログイン機能(devise)
+* 選手情報登録/編集/削除機能
+* 管理者クリックで支払い月、支払日取得変更機能
+* 背番号検索機能
+* 支払い状況表示切替機能（未定）
+* レスポンシブ対応
 
 # テスト
 * 単体テスト(model)
