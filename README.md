@@ -1,24 +1,26 @@
-# README
+# Auelu-Accounting
+  チームの会計として、月会費滞納問題、誰がいつまで月会費を支払っているかを確認できるアプリケーションです。
+  
+  レスポンシブ対応しているので、スマホでもご確認いただけます。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![top](https://user-images.githubusercontent.com/61536866/101602870-189b1000-3a42-11eb-9552-c62aa955a991.png "ログイン時のトップページ")
 
-Things you may want to cover:
 
-* Ruby version
+![top](https://user-images.githubusercontent.com/61536866/101604839-d0c9b800-3a44-11eb-949f-462c058ffda0.png "ログイン時のトップページ")
 
-* System dependencies
+# URL
+https://aueluaccounting.herokuapp.com/
+実際に使用しているものになります。
 
-* Configuration
+# 使用技術
+* Ruby 
+* Ruby on Rails 
+* RSpec
 
-* Database creation
+# 機能一覧
+* ログイン機能(devise)
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# テスト
+* 単体テスト(model)
+* 機能テスト(request)
+* 統合テスト(system)
